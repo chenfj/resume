@@ -1,0 +1,116 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\usepackage{ulem}
+\newcommand{\li}{\uline{\hspace{0.5em}}}
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{陈菲菊}
+\centerline{JAVA开发工程师}
+\basicInfo{
+  \email{cfeiju@gmail.com} \textperiodcentered\ 
+  \phone{(+86) 170-5101-3737} }
+
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{北京联信志诚信息技术有限公司}\  \  北京}{2016年3月 -- 2018年3月}
+\role{java开发工程师}{经理: 姜然}
+
+\datedsubsection{\textbf{CRM工单自定义系统}}{2017年9月 -- 2018年2月}
+\role{JAVA}{担任小组长}
+\begin{onehalfspacing}
+用户可以根据自己的需求配置自己的工单样式,主要功能包括配置工单类型（是否采用流程、相关配置信息）、行业模板管理、自定义字段（字段添加、字段页面属性配置（根据工单类型））、预览、导入导出等。
+\begin{itemize}
+  \item 工单自定义满足用户工单多样化的基本需求
+  \item 使用Redis 存储页面相关数据, 减轻数据库访问压力，提高页面访问速度
+  \item 删除数据时，涉及到历史数据，会出现数据混乱现象，于是做删除操作（取消应用）时需要提示用户并且将字段内容清空
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{华夏幸福基业人力资源共享服务平台}}{2016年12月 -- 2017年9月}
+\role{JAVA}{担任小组长}
+\begin{onehalfspacing}
+参与需求讨论，设计，开发，部署，升级，系统维护等工作。实现功能包括查看工单处理流程、工单超期提醒（以短信和邮件形式通知）、工单报表、知识库模块、短信邮件模块（模板）等。
+\begin{itemize}
+  \item 使用quartz做定时任务时，quartz的job中使用autowired注解注入的对象为空，最后使用spring-quartz提供的AdaptableJobFactory类解决。
+  \item 更换附件插件，这部分涉及到历史数据，需要兼容所以更新过程中比较麻烦，采用存储过程处理数据，使用encode解决中文编码问题。
+  \item 报表导出时遇到乱码，经过排查发现使用mysql的group \li concat函数时，默认是blob形式，采用cast进行类型转换。
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{ACS业务处理中心业务支持与运行管理辅助系统}}{2016年10月 -- 2016年12月}
+\role{JAVA}{开发人员}
+\begin{onehalfspacing}
+驻场开发，主要负责登记簿模块及值班管理模块中的技术部巡检功能和日间监控功能，登记簿中部分采用activiti工作流技术解决流程审批功能。
+\begin{itemize}
+  \item 采用activity工作流实现审批功能。
+
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{老人一键通系统}}{2016年5月 -- 2016年8月}
+\role{JAVA}{经理：马天才}
+\begin{onehalfspacing}
+负责老人一键通系统（从需求到验收），主要是来电弹工单记录历史和客户信息模块（添加多个家人信息等）。
+\begin{itemize}
+  \item 来电弹屏，记录客户信息，外拨电话记录电话信息。
+  \item 根据权限角色查看工单列表及详情。
+
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{配置系统国际化}}{2016年3月 -- 2016年5月}
+\role{JAVA}{经理：马天才}
+\begin{onehalfspacing}
+主要负责配置系统的国际化（中英文版）。
+\begin{itemize}
+  \item 系统满足跨国用户的语言需要。
+\end{itemize}
+\end{onehalfspacing}
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faCogs\ IT 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 编程语言: Java > C == Python > Scala
+  \item 平台: windows,linux
+  \item 开发: myeclipse,git
+  \item 框架：ssm,shiro,acivity,netty
+  \item 熟悉java多线程，了解java高并发，了解netty框架
+  \item 会简单使用liquibase数据库重构工具
+  \item 简单使用Google Guava工具库及probuf序列化
+  \item 了解java8新特性、JVM虚拟机工作原理、JVM垃圾回收机制，简单使用JDK调优工具
+  \item 了解elasticsearch搜索框架
+  \item 对技术有激情，喜欢钻研，主动性高，具有较强的独立工作能力和解决问题的能力
+\end{itemize}
+
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{山西农业大学}, 山西,晋中}{2012 -- 2016}
+\textit{本科}\ 软件工程
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 技术博客: https://my.oschina.net/ferchen
+  \item GitHub: https://github.com/chenfj
+  \item 微信：chenfj \li IT
+  \item 语言: 英语
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
